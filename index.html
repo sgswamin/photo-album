@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Photo Album</title>
+  </head>
+  <body>
+    
+    <nav>
+      <button onclick="goPrevious()">Previous</button>
+      <button onclick="goNext()">Next</button>
+    </nav>
+    <main id="photo">
+      <h1>Photo Album</h1>
+      <img src="https://mimo.app/i/colosseum.png" alt="Colosseum" width="200" />
+      <ul id="keywords">
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      
+    </main>
+    <script>
+      const ul = document.getElementById("keywords");
+      const main = document.getElementById("photo");
+      ul.children[0].innerHTML = "colosseum";
+      ul.children[1].innerHTML = "beach";
+      ul.children[2].innerHTML = "eiffel";
+
+      function goPrevious() {
+        main.children[0].innerHTML = "Beach";
+        main.children[1].src = "https://mimo.app/i/beach.png";
+      }
+      
+      function goNext() {
+        main.children[0].innerHTML = "Eiffel";
+        main.children[1].src = "https://mimo.app/i/eiffel.png";
+      }
+    </script>
+  </body>
+</html>
